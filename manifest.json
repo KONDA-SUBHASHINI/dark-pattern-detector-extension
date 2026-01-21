@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "DarkPattern Guardian",
+  "version": "1.0",
+  "description": "AI-powered detection of dark patterns on websites to protect user privacy and prevent manipulation",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "DarkPattern Guardian"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

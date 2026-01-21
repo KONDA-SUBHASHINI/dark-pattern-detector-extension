@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🛡️ DarkPattern Guardian</h1>
+    <div class="status" id="status">
+      <div class="status-indicator active"></div>
+      <span>Protection Active</span>
+    </div>
+    
+    <div class="stats">
+      <div class="stat-item">
+        <div class="stat-number" id="patternsDetected">0</div>
+        <div class="stat-label">Patterns Detected</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="sitesScanned">0</div>
+        <div class="stat-label">Sites Scanned</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Recent Detections</h3>
+      <div id="recentDetections" class="detections-list">
+        <p class="no-data">No dark patterns detected yet</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Settings</h3>
+      <label class="toggle">
+        <input type="checkbox" id="enableProtection" checked>
+        <span>Enable Real-time Protection</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="enableNotifications" checked>
+        <span>Show Notifications</span>
+      </label>
+    </div>
+
+    <button id="scanNow" class="btn-primary">Scan Current Page</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
